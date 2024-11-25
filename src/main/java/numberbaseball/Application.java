@@ -24,33 +24,32 @@ public class Application {
             System.out.print("세 번째 숫자를 입력하세요: ");
             int user3 = scanner.nextInt();
 
-
             // TODO: strike 개수를 계산하세요
             int strike = 0;
 
 
-                if (com1 == user1) {
-                    strike++;
-                }
-                if (com2 == user2) {
-                    strike++;
-                }
-                if (com3 == user3) {
-                    strike++;
-                }
-                // TODO: ball 갯수를 계산
+            if (com1 == user1) {
+                strike++;
+            }
+            if (com2 == user2) {
+                strike++;
+            }
+            if (com3 == user3) {
+                strike++;
+            }
+            // TODO: ball 갯수를 계산
             int ball = 0;
-            if (com2 == user1  || com3 == user1 ) {
+            if (com1 == user2 || com1 == user3) {
                 ball++;
             }
-            if ( com1 == user2 || com3 == user2 ) {
+            if (com2 == user1 || com2 == user3) {
                 ball++;
             }
-            if (com1 == user3  || com2 == user3 ) {
+            if (com3 == user1 || com3 == user2) {
                 ball++;
             }
             if (strike == 0 && ball == 0) {
-                System.out.println("아웃");
+
             } else {
                 System.out.println(strike + " 스트라이크, " + ball + " 볼");
             }
@@ -65,10 +64,7 @@ public class Application {
                 break;
             }
         }
-        scanner.close();
+            scanner.close();
     }
 }
-
-
-
 
