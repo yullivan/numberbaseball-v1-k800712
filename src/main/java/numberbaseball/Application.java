@@ -23,11 +23,8 @@ public class Application {
             int user2 = scanner.nextInt();
             System.out.print("세 번째 숫자를 입력하세요: ");
             int user3 = scanner.nextInt();
-
             // TODO: strike 개수를 계산하세요
             int strike = 0;
-
-
             if (com1 == user1) {
                 strike++;
             }
@@ -48,15 +45,15 @@ public class Application {
             if (com3 == user1 || com3 == user2) {
                 ball++;
             }
+
             if (strike == 0 && ball == 0) {
+                System.out.println("아웃");
 
             } else {
                 System.out.println(strike + " 스트라이크, " + ball + " 볼");
             }
             // TODO: 결과를 출력하세요 (예: "1 스트라이크")
-            if (strike == 0) {
-                System.out.println("아웃");
-            }
+
 
             // TODO: 3 스트라이크인 경우 게임을 끝내세요
             if (strike == 3) {
